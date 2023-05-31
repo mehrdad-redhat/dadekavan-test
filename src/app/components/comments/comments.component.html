@@ -1,0 +1,17 @@
+<!-- <p-panel header="Comments">
+  <ul>
+    <li *ngFor="let comment of comments">
+      <dk-comment-card [data]="comment"></dk-comment-card>
+    </li>
+  </ul>
+</p-panel> -->
+
+<p-accordion [activeIndex]="1">
+  <p-accordionTab header="Comments">
+    <ul>
+      <li *ngFor="let comment of comments">
+        <dk-comment-card [data]="comment"></dk-comment-card>
+      </li>
+    </ul>
+  </p-accordionTab>
+</p-accordion>

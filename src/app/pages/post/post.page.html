@@ -1,0 +1,23 @@
+<section id="wrapper">
+  <div class="container flex-col" *ngIf="post.id!==0">
+    <nav class="flex-row jus-between al-center">
+
+      <h1><a [routerLink]="['/posts']">Posts > </a> {{postId}}</h1>
+      <a
+    [routerLink]="['posts']"
+    pButton
+    pRipple
+    label="Back"
+    class="p-button-info"
+    icon="pi pi-angle-left"
+  ></a>
+    </nav>
+
+    <header class="flex-row">
+      <h2>{{post.title}}</h2>
+      <dk-author-card [data]="post.user"></dk-author-card>
+    </header>
+    <p>{{post.body}}</p>
+    <dk-comments [postId]="post.id"></dk-comments>
+  </div>
+</section>

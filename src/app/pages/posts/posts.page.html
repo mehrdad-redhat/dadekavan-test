@@ -1,0 +1,10 @@
+<section id="wrapper">
+  <div class="container flex-col">
+    <h1>Posts</h1>
+    <ul class="flex-col">
+      <li *ngFor="let post of posts">
+        <dk-post-card [data]="post"></dk-post-card>
+      </li>
+    </ul>
+  </div>
+</section>

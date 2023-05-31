@@ -1,0 +1,17 @@
+<div class="card flex-row jus-between al-center" *ngIf="post">
+  <div class="data flex-col">
+    <h2 class="title">{{ post.title }}</h2>
+    <span class="email"
+      ><i class="pi pi-envelope"></i>{{ post?.user?.email }}</span
+    >
+  </div>
+  <a
+    [routerLink]="[post.id]"
+    pButton
+    pRipple
+    label="Read"
+    class="p-button-info"
+    icon="pi pi-angle-right"
+    iconPos="right"
+  ></a>
+</div>
